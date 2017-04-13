@@ -1,0 +1,48 @@
+{
+    "id": "image.grabber",
+    "name": {
+        "en": "Image Grabber"
+    },
+    "version": "0.0.1",
+    "compatibility": "0.x || 1.x",
+    "author": {
+        "name": "Chamid Media",
+        "email": "info@chamidmedia.nl"
+    },
+    "category": "internet",
+    "flow": {
+		"triggers": [
+	      {
+	        "id": "imagegrabbed",
+	        "title": {
+	          "en": "An image was grabbed"
+	        },
+	        "tokens": [
+	            {
+	                "name": "image",
+	                "title": {
+	                    "en": "image"
+	                }
+	            }
+	        ]
+	      }
+	    ],
+	    "actions": [
+        {
+            "id": "grabimage",
+            "title": {
+                "en": "Grab image"
+            },
+            "args": [
+	              {
+		              "name": "url",
+		              "type": "text",
+		              "placeholder": {
+			              "en": "URL"
+		              }
+	              }
+	        ]
+        }
+        ]
+    }
+}
