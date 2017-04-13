@@ -10,6 +10,13 @@
         "email": "info@chamidmedia.nl"
     },
     "category": "internet",
+    "images": {
+      "large": "./assets/images/large.jpg",
+      "small": "./assets/images/small.jpg"
+    },
+    "description": {
+    	"en": "Input the URL to an image to grab it as a Homey token. You can use this token, for example, with the Telegram app"
+    },
     "flow": {
 		"triggers": [
 	      {
