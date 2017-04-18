@@ -9,6 +9,8 @@ The app features 2 cards:
 
 **Want to show your appreciation for this app? A donation is possible via http://www.d2c.nl **
 
+**Version 0.0.2**
+- https URL's with invalid certificates now also work.
 
 **Version 0.0.1**
 - First released version
