@@ -3,7 +3,7 @@
     "name": {
         "en": "Image Grabber"
     },
-    "version": "0.0.2",
+    "version": "0.0.3",
     "compatibility": "0.x || 1.x",
     "author": {
         "name": "Chamid Media",
@@ -46,6 +46,16 @@
 		              "type": "text",
 		              "placeholder": {
 			              "en": "URL"
+		              },
+		              "name": "username",
+		              "type": "text",
+		              "placeholder": {
+			              "en": "Username (optional)"
+		              },
+		              "name": "password",
+		              "type": "text",
+		              "placeholder": {
+			              "en": "Password (optional)"
 		              }
 	              }
 	        ]

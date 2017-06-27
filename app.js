@@ -17,7 +17,14 @@ Homey.manager('flow').on('action.grabimage', function (callback, args) {
 	
 	Homey.log ('Grabbing ' + args.url);
 	
-	request.get(args.url, function (error, response, body) {
+	request.get(args.url, {
+		'auth': {
+	    'user': args.username || false,
+	    'pass': args.password || false,
+	    'sendImmediately': false
+	  }
+		
+	}, function (error, response, body) {
 	    if (!error && response.statusCode == 200) {
 	        
 	        Homey.log ('Done!');
