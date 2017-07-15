@@ -30,6 +30,12 @@
 	                "title": {
 	                    "en": "image"
 	                }
+	            },
+	            {
+	                "name": "url",
+	                "title": {
+	                    "en": "URL"
+	                }
 	            }
 	        ]
 	      }
@@ -46,16 +52,6 @@
 		              "type": "text",
 		              "placeholder": {
 			              "en": "URL"
-		              },
-		              "name": "username",
-		              "type": "text",
-		              "placeholder": {
-			              "en": "Username (optional)"
-		              },
-		              "name": "password",
-		              "type": "text",
-		              "placeholder": {
-			              "en": "Password (optional)"
 		              }
 	              }
 	        ]
