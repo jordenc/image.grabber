@@ -1,10 +1,11 @@
 {
     "id": "image.grabber",
+    "sdk": 2,
     "name": {
         "en": "Image Grabber"
     },
     "version": "0.0.3",
-    "compatibility": "0.x || 1.x",
+    "compatibility": ">=1.5.0",
     "author": {
         "name": "Chamid Media",
         "email": "info@chamidmedia.nl"
@@ -15,14 +16,28 @@
       "small": "./assets/images/small.jpg"
     },
     "description": {
-    	"en": "Input the URL to an image to grab it as a Homey token. You can use this token, for example, with the Telegram app"
+    	"en": "Input the URL to an image to grab it as a Homey image token. You can use this token, for example, with the Telegram app or email-sender app",
+    	"nl": "Geef een URL van een afbeelding op, om de afbeelding op te slaan in een Homey image token. Deze kan dan worden gebruikt met andere apps, om de afbeelding via E-mail, Telegram e.d. te verzenden."
+    },
+    "contributing": {
+        "donate": {
+            "paypal": {
+                "email": "info@chamidmedia.nl",
+                "currency": "EUR"
+            }
+        }
+    },
+    "tags": {
+	  "en": [ "image", "webcam", "camera" ],
+	  "nl": [ "image", "webcam", "camera", "afbeelding"] 
     },
     "flow": {
 		"triggers": [
 	      {
 	        "id": "imagegrabbed",
 	        "title": {
-	          "en": "An image was grabbed"
+	          "en": "An image is grabbed",
+	          "nl": "Een afbeelding is opgehaald"
 	        },
 	        "tokens": [
 	            {
@@ -44,14 +59,16 @@
         {
             "id": "grabimage",
             "title": {
-                "en": "Grab image"
+                "en": "Grab image",
+                "nl": "Haal afbeelding op"
             },
             "args": [
 	              {
 		              "name": "url",
 		              "type": "text",
 		              "placeholder": {
-			              "en": "URL"
+			              "en": "URL",
+			              "nl": "URL"
 		              }
 	              }
 	        ]

@@ -16,6 +16,10 @@ Replace [USERNAME] and [PASSWORD] with the username and password, and place the 
 
 **Want to show your appreciation for this app? A donation is possible via http://www.d2c.nl **
 
+**Version 0.0.4**
+- Official Homey Image Tokens now supported. This means you can use the tokens with all other supported apps.
+- Now Homey SDK v2 ready
+
 **Version 0.0.3**
 - Detailed information about how to use username/password combinations.
 - The URL is now also given as a token with the trigger, so you can now see which URL has triggered the "Image has been grabbed"-card. This means, better usability if you set up multiple image triggers.
