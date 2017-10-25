@@ -13,6 +13,14 @@ class App extends Homey.App {
 	
 		let grabImageAction = new Homey.FlowCardAction('grabimage');
 		
+		let imageGrabbed = new Homey.FlowCardTrigger('imagegrabbed')
+			.register()
+		    .registerRunListener( (args, state ) => {
+				
+		        return Promise.resolve( true );
+		
+		    })
+		
 		grabImageAction
 			.register()
 			.registerRunListener ((args, state) => {
@@ -44,8 +52,7 @@ class App extends Homey.App {
 					                })
 								
 						        // trigger a Flow
-						        new Homey.FlowCardTrigger('imagegrabbed')
-					                .register()
+						        imageGrabbed
 					                .trigger({
 					                    image: myImage,
 					                    url: args.url
