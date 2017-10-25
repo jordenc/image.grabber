@@ -34,14 +34,15 @@ class App extends Homey.App {
 				        
 				        let myImage = new Homey.Image('jpg');
 				        
-				        myImage.setPath('/userdata/image.jpg');
+				        //myImage.setPath('/userdata/image.jpg');
+				        myImage.setBuffer (body);
 					    myImage.register()
 					        .then(() => {
 					
 					            // create a token & register it
 					            let myImageToken = new Homey.FlowToken('image', {
 					                type: 'image',
-					                title: args.url
+					                title: 'Image'
 					            })
 					            
 					            myImageToken
