@@ -16,7 +16,7 @@ Replace [USERNAME] and [PASSWORD] with the username and password, and place the 
 
 **Want to show your appreciation for this app? A donation is possible via http://www.d2c.nl **
 
-**Version 0.0.4**
+**Version 0.1.0**
 - Official Homey Image Tokens now supported. This means you can use the tokens with all other supported apps.
 - Now Homey SDK v2 ready
 
