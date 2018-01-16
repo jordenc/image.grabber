@@ -51,7 +51,8 @@
 	                "name": "url",
 	                "title": {
 	                    "en": "URL"
-	                }
+	                },
+	                "example": "http://"
 	            }
 	        ]
 	      }
