@@ -16,6 +16,9 @@ Replace [USERNAME] and [PASSWORD] with the username and password, and place the 
 
 **Want to show your appreciation for this app? A donation is possible via http://www.d2c.nl **
 
+**Version 0.1.1**
+- New action card to grab password protected URL's, enabling to grab images from Dahua cams and other "Digest auth"-protected cams and URL's. For Dahua and other Digest Auth-cams select to send login "Not immediately".
+
 **Version 0.1.0**
 - Official Homey Image Tokens now supported. This means you can use the tokens with all other supported apps.
 - Now Homey SDK v2 ready

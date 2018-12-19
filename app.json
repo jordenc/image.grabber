@@ -4,7 +4,7 @@
     "name": {
         "en": "Image Grabber"
     },
-    "version": "0.1.0",
+    "version": "0.1.1",
     "compatibility": ">=1.5.0",
     "author": {
         "name": "Chamid Media",
@@ -72,6 +72,47 @@
 			              "en": "URL",
 			              "nl": "URL"
 		              }
+	              }
+	        ]
+        },
+        {
+            "id": "grabprotectedimage",
+            "title": {
+                "en": "Grab password protected image",
+                "nl": "Haal beveiligde afbeelding op"
+            },
+            "args": [
+	              {
+		              "name": "url",
+		              "type": "text",
+		              "placeholder": {
+			              "en": "URL",
+			              "nl": "URL"
+		              }
+	              },
+	              {
+		              "name": "username",
+		              "type": "text",
+		              "placeholder": {
+			              "en": "User",
+			              "nl": "User"
+		              }
+	              },
+	              {
+		              "name": "password",
+		              "type": "text",
+		              "placeholder": {
+			              "en": "Pass",
+			              "nl": "Pass"
+		              }
+	              },
+	              {
+		              "name": "sendImmediately",
+		              "type": "dropdown",
+		              "values": [
+		              {"id": "true", "label": {"en": "Send login Immediately", "nl": "Direct inloggen"}},
+		              {"id": "false", "label": {"en": "Don't send login immediately", "nl": "Niet direct inloggen"}}
+		              ]
 	              }
 	        ]
         }
