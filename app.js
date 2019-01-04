@@ -62,6 +62,8 @@ class App extends Homey.App {
 					                })
 					                .then( console.log( 'imagegrabbed') )
 						    })
+						    
+						return Promise.resolve( true );  
 						
 				    } else {
 					    
@@ -117,7 +119,10 @@ class App extends Homey.App {
 					                    url: args.url
 					                })
 					                .then( console.log( 'imagegrabbed') )
+					                
 						    })
+						    
+						return Promise.resolve( true );  
 						
 				    } else {
 					    
