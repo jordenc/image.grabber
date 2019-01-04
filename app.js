@@ -100,7 +100,7 @@ class App extends Homey.App {
 					            // create a token & register it
 					            let myImageToken = new Homey.FlowToken('image', {
 					                type: 'image',
-					                title: 'Image'
+					                title: 'image'
 					            })
 					            
 					            myImageToken
