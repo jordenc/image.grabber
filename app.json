@@ -4,13 +4,13 @@
     "name": {
         "en": "Image Grabber"
     },
-    "version": "0.1.2",
+    "version": "0.1.3",
     "compatibility": ">=1.5.0",
     "author": {
         "name": "Chamid Media",
         "email": "info@chamidmedia.nl"
     },
-    "category": "internet",
+    "category": "tools",
     "images": {
       "large": "./assets/images/large.jpg",
       "small": "./assets/images/small.jpg"

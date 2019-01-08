@@ -16,6 +16,9 @@ Replace [USERNAME] and [PASSWORD] with the username and password, and place the 
 
 **Want to show your appreciation for this app? A donation is possible via http://www.d2c.nl **
 
+**Version 0.1.3**
+- Changed category to "Tools"
+
 **Version 0.1.2**
 - Bugfix
 
