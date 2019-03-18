@@ -4,7 +4,7 @@
     "name": {
         "en": "Image Grabber"
     },
-    "version": "0.1.3",
+    "version": "0.1.4",
     "compatibility": ">=1.5.0",
     "author": {
         "name": "Chamid Media",
@@ -30,7 +30,8 @@
     },
     "tags": {
 	  "en": [ "image", "webcam", "camera" ],
-	  "nl": [ "image", "webcam", "camera", "afbeelding"]
+	  "nl": [ "image", "webcam", "camera", "afbeelding"],
+	  "de": [ "image", "webcam", "camera", "bild"]
     },
     "flow": {
 		"triggers": [

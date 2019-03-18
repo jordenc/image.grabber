@@ -36,8 +36,8 @@ class App extends Homey.App {
 				        
 				        let myImage = new Homey.Image('jpg');
 				        
-				        //myImage.setPath('/userdata/image.jpg');
 				        myImage.setBuffer (body);
+				        //myImage.setUrl ('https://www.totallyhosted.nl/img/datacentra/serverius-datacenter_small.jpg');
 					    myImage.register()
 					        .then(() => {
 					
@@ -94,7 +94,6 @@ class App extends Homey.App {
 				        
 				        let myImage = new Homey.Image('jpg');
 				        
-				        //myImage.setPath('/userdata/image.jpg');
 				        myImage.setBuffer (body);
 					    myImage.register()
 					        .then(() => {
