@@ -17,7 +17,8 @@
     },
     "description": {
     	"en": "Input the URL to an image to grab it as a Homey image token. You can use this token, for example, with the Telegram app or email-sender app",
-    	"nl": "Geef een URL van een afbeelding op, om de afbeelding op te slaan in een Homey image token. Deze kan dan worden gebruikt met andere apps, om de afbeelding via E-mail, Telegram e.d. te verzenden."
+    	"nl": "Geef een URL van een afbeelding op, om de afbeelding op te slaan in een Homey image token. Deze kan dan worden gebruikt met andere apps, om de afbeelding via E-mail, Telegram e.d. te verzenden.",
+    	"de": "Gebe die URL zu einem Bild ein, um es als Homey-Bild-Token zu speichern. Du kannst diesen Token z.B. mit der Telegram-App oder der email-sender-App verwenden."
     },
     "contributing": {
         "donate": {
@@ -29,7 +30,7 @@
     },
     "tags": {
 	  "en": [ "image", "webcam", "camera" ],
-	  "nl": [ "image", "webcam", "camera", "afbeelding"] 
+	  "nl": [ "image", "webcam", "camera", "afbeelding"]
     },
     "flow": {
 		"triggers": [
@@ -37,20 +38,23 @@
 	        "id": "imagegrabbed",
 	        "title": {
 	          "en": "An image is grabbed",
-	          "nl": "Een afbeelding is opgehaald"
+	          "nl": "Een afbeelding is opgehaald",
+	          "de": "Ein Bild wurde gegrabbt"
 	        },
 	        "tokens": [
 	            {
 	                "name": "image",
 	                "title": {
-	                    "en": "image"
+	                    "en": "image",
+	                    "de": "Bild"
 	                },
 	                "type": "image"
 	            },
 	            {
 	                "name": "url",
 	                "title": {
-	                    "en": "URL"
+	                    "en": "URL",
+	                    "de": "URL"
 	                },
 	                "example": "http://"
 	            }
@@ -62,7 +66,8 @@
             "id": "grabimage",
             "title": {
                 "en": "Grab image",
-                "nl": "Haal afbeelding op"
+                "nl": "Haal afbeelding op",
+                "de": "Bild grabben"
             },
             "args": [
 	              {
@@ -70,7 +75,8 @@
 		              "type": "text",
 		              "placeholder": {
 			              "en": "URL",
-			              "nl": "URL"
+			              "nl": "URL",
+				      "de": "URL"
 		              }
 	              }
 	        ]
@@ -79,7 +85,8 @@
             "id": "grabprotectedimage",
             "title": {
                 "en": "Grab password protected image",
-                "nl": "Haal beveiligde afbeelding op"
+                "nl": "Haal beveiligde afbeelding op",
+                "de": "Grabbe ein passwortgeschütztes Bild"
             },
             "args": [
 	              {
@@ -87,7 +94,8 @@
 		              "type": "text",
 		              "placeholder": {
 			              "en": "URL",
-			              "nl": "URL"
+			              "nl": "URL",
+				      "de": "URL"
 		              }
 	              },
 	              {
@@ -95,7 +103,8 @@
 		              "type": "text",
 		              "placeholder": {
 			              "en": "User",
-			              "nl": "User"
+			              "nl": "User",
+				      "de": "User"
 		              }
 	              },
 	              {
@@ -103,15 +112,16 @@
 		              "type": "text",
 		              "placeholder": {
 			              "en": "Pass",
-			              "nl": "Pass"
+			              "nl": "Pass",
+				      "de": "Pass"
 		              }
 	              },
 	              {
 		              "name": "sendImmediately",
 		              "type": "dropdown",
 		              "values": [
-		              {"id": "true", "label": {"en": "Send login Immediately", "nl": "Direct inloggen"}},
-		              {"id": "false", "label": {"en": "Don't send login immediately", "nl": "Niet direct inloggen"}}
+		              {"id": "true", "label": {"en": "Send login Immediately", "nl": "Direct inloggen", "de": "Login sofort senden"}},
+		              {"id": "false", "label": {"en": "Don't send login immediately", "nl": "Niet direct inloggen", "de": "Login nicht sofort senden"}}
 		              ]
 	              }
 	        ]
