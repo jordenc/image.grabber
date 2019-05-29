@@ -16,6 +16,9 @@ Replace [USERNAME] and [PASSWORD] with the username and password, and place the 
 
 **Want to show your appreciation for this app? A donation is possible via http://www.d2c.nl **
 
+**Version 0.1.5**
+- Support for new Homey 2.2.0 Image SDK
+
 **Version 0.1.4**
 - Added German language (Thanks mapulu!)
 

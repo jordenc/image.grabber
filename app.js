@@ -1,11 +1,10 @@
 'use strict';
 
 const Homey 	=	require('homey');
-const request	=	require('request').defaults({ encoding: null });
+const fetch = require('node-fetch');
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
-//var request = require('request').defaults({ encoding: null });
 
 class App extends Homey.App {
 	
@@ -29,49 +28,41 @@ class App extends Homey.App {
 			
 				console.log('Grabbing ' + args.url);
 				
-				request.get(args.url, {}, function (error, response, body) {
-				    if (!error && response.statusCode == 200) {
-				        
-				        console.log('Done!');
-				        
-				        let myImage = new Homey.Image('jpg');
-				        
-				        myImage.setBuffer (body);
-				        //myImage.setUrl ('https://www.totallyhosted.nl/img/datacentra/serverius-datacenter_small.jpg');
-					    myImage.register()
-					        .then(() => {
-					
-					            // create a token & register it
-					            let myImageToken = new Homey.FlowToken('image', {
-					                type: 'image',
-					                title: 'image'
-					            })
-					            
-					            myImageToken
-					                .register()
-					                .then( () => {
-					                    myImageToken.setValue( myImage )
-					                        .then( console.log( 'setValue') )
-					                })
-								
-						        // trigger a Flow
-						        imageGrabbed
-					                .trigger({
-					                    image: myImage,
-					                    url: args.url
-					                })
-					                .then( console.log( 'imagegrabbed') )
-						    })
-						    
-						return Promise.resolve( true );  
-						
-				    } else {
-					    
-					    console.log('Error: ' + error);
-					    return Promise.resolve( false );  
-					    
-				    }
+				const myImage = new Homey.Image();
+				myImage.setStream(async (stream) => {
+				  const res = await fetch(args.url);
+				  if(!res.ok)
+				    throw new Error('Invalid Response');
+				
+				  return res.body.pipe(stream);
 				});
+				myImage.register().then(() => {
+					
+					// create a token & register it
+		            let myImageToken = new Homey.FlowToken('image', {
+		                type: 'image',
+		                title: 'image'
+		            })
+		            
+		            myImageToken
+		                .register()
+		                .then( () => {
+		                    myImageToken.setValue( myImage )
+		                        .then( console.log( 'setValue') )
+		                })
+					
+			        // trigger a Flow
+			        imageGrabbed
+		                .trigger({
+		                    image: myImage,
+		                    url: args.url
+		                })
+		                .then( console.log( 'imagegrabbed') )
+					
+				}).catch(console.error);
+
+				return Promise.resolve( true );
+
 			})
 			
 		grabProtectedImageAction
@@ -82,56 +73,45 @@ class App extends Homey.App {
 				
 				if (args.sendImmediately == "false") var sendImmediately = false; else var sendImmediately = true;
 				
-				request.get(args.url, {
-				  'auth': {
-				    'user': args.username,
-				    'pass': args.password,
-				    'sendImmediately': sendImmediately
-				  }}, function (error, response, body) {
-				    if (!error && response.statusCode == 200) {
-				        
-				        console.log('Done!');
-				        
-				        let myImage = new Homey.Image('jpg');
-				        
-				        myImage.setBuffer (body);
-					    myImage.register()
-					        .then(() => {
+				const myImage = new Homey.Image();
+				myImage.setStream(async (stream) => {
 					
-					            // create a token & register it
-					            let myImageToken = new Homey.FlowToken('image', {
-					                type: 'image',
-					                title: 'image'
-					            })
-					            
-					            myImageToken
-					                .register()
-					                .then( () => {
-					                    myImageToken.setValue( myImage )
-					                        .then( console.log( 'setValue') )
-					                })
-								
-						        // trigger a Flow
-						        imageGrabbed
-					                .trigger({
-					                    image: myImage,
-					                    url: args.url
-					                })
-					                .then( console.log( 'imagegrabbed') )
-					                
-						    })
-						    
-						return Promise.resolve( true );  
-						
-				    } else {
-					    
-					    console.log('Error: ' + error);
-					    return Promise.resolve( false );  
-					    
-				    }
+				  headers.set('Authorization', 'Basic ' + Buffer.from(args.username + ":" + args.password).toString('base64'));
+					
+				  const res = await fetch(args.url, {headers: headers});
+				  if(!res.ok)
+				    throw new Error('Invalid Response');
+				
+				  return res.body.pipe(stream);
 				});
+				myImage.register().then(() => {
+					
+					// create a token & register it
+		            let myImageToken = new Homey.FlowToken('image', {
+		                type: 'image',
+		                title: 'image'
+		            })
+		            
+		            myImageToken
+		                .register()
+		                .then( () => {
+		                    myImageToken.setValue( myImage )
+		                        .then( console.log( 'setValue') )
+		                })
+					
+			        // trigger a Flow
+			        imageGrabbed
+		                .trigger({
+		                    image: myImage,
+		                    url: args.url
+		                })
+		                .then( console.log( 'imagegrabbed') )
+					
+				}).catch(console.error);
+
+				return Promise.resolve( true );
+								
 			})
-			
 	}
 }
 
