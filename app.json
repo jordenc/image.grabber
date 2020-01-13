@@ -4,11 +4,19 @@
     "name": {
         "en": "Image Grabber"
     },
-    "version": "0.1.6",
+    "version": "0.1.7",
     "compatibility": ">=2.2.0",
     "author": {
         "name": "Chamid Media",
         "email": "info@chamidmedia.nl"
+    },
+    "contributing": {
+            "donate": {
+                "paypal": {
+                    "email": "info@chamidmedia.nl",
+                    "currency": "EUR"
+                }
+            }
     },
     "category": "tools",
     "images": {

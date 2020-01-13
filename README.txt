@@ -14,9 +14,7 @@ http://[USERNAME]:[PASSWORD]@[SNAPSHOTURL]
 
 Replace [USERNAME] and [PASSWORD] with the username and password, and place the rest of the snapshot URL instead of [SNAPSHOTURL]. Please note that this only works for password popups, not for forms.
 
-**Want to show your appreciation for this app? A donation is possible via http://www.d2c.nl **
-
-**Version 0.1.6**
+**Version 0.1.7**
  - Added support for webcams that respond with invalid http-headers (HPE_INVALID_HEADER_TOKEN)
 
 **Version 0.1.5**
