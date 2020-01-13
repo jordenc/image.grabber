@@ -1,7 +1,6 @@
 'use strict';
 
 process.binding('http_parser').HTTPParser = require('http-parser-js').HTTPParser;
-const fetch = require('node-fetch');
 
 const Homey 	=	require('homey');
 const fetch = require('node-fetch');
