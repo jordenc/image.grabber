@@ -4,7 +4,7 @@
     "name": {
         "en": "Image Grabber"
     },
-    "version": "0.1.8",
+    "version": "0.1.9",
     "compatibility": ">=2.2.0",
     "author": {
         "name": "Chamid Media",
