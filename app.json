@@ -1,6 +1,7 @@
 {
     "id": "image.grabber",
     "sdk": 3,
+	"brandColor": "#082e83",
     "name": {
         "en": "Image Grabber"
     },
