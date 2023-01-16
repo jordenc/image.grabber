@@ -1,14 +1,14 @@
 {
     "id": "image.grabber",
-    "sdk": 2,
+    "sdk": 3,
     "name": {
         "en": "Image Grabber"
     },
-    "version": "0.1.9",
-    "compatibility": ">=2.2.0",
+    "version": "1.0.0",
+    "compatibility": ">=5.0.0",
     "author": {
-        "name": "Chamid Media",
-        "email": "info@chamidmedia.nl"
+        "name": "Corbata",
+        "email": "info@corbata.nl"
     },
     "contributing": {
             "donate": {
@@ -27,14 +27,6 @@
     	"en": "Input the URL to an image to grab it as a Homey image token. You can use this token, for example, with the Telegram app or email-sender app",
     	"nl": "Geef een URL van een afbeelding op, om de afbeelding op te slaan in een Homey image token. Deze kan dan worden gebruikt met andere apps, om de afbeelding via E-mail, Telegram e.d. te verzenden.",
     	"de": "Gebe die URL zu einem Bild ein, um es als Homey-Bild-Token zu speichern. Du kannst diesen Token z.B. mit der Telegram-App oder der email-sender-App verwenden."
-    },
-    "contributing": {
-        "donate": {
-            "paypal": {
-                "email": "info@chamidmedia.nl",
-                "currency": "EUR"
-            }
-        }
     },
     "tags": {
 	  "en": [ "image", "webcam", "camera" ],
@@ -65,7 +57,8 @@
 	                    "en": "URL",
 	                    "de": "URL"
 	                },
-	                "example": "http://"
+					"type": "string",
+	                "example": "https://"
 	            }
 	        ]
 	      }
@@ -78,6 +71,11 @@
                 "nl": "Haal afbeelding op",
                 "de": "Bild grabben"
             },
+			"titleFormatted": {
+				"en": "Gran image [[url]]",
+				"nl": "Haal afbeelding [[url]] op",
+				"de": "Bild [[url]] grabben"
+			},
             "args": [
 	              {
 		              "name": "url",
@@ -97,6 +95,11 @@
                 "nl": "Haal beveiligde afbeelding op",
                 "de": "Grabbe ein passwortgeschütztes Bild"
             },
+			"titleFormatted": {
+				"en": "Grab password protected image [[url]] with username [[username]] and password [[password]] ([[sendImmediately]]))",
+				"nl": "Haal beveiligde afbeelding [[url]] op met gebruikersnaam [[username]] en wachtwoord [[password]] ([[sendImmediately]]))",
+				"de": "Passwortgeschütztes Bild [[url]] grabben mit [[username]] und [[password]] ([[sendImmediately]]))"
+			},
             "args": [
 	              {
 		              "name": "url",
